@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Upload CSV</title>
+	<script type="text/javascript">
+		window.API_URL = '{% url "api:users-list" %}';
+	</script>
+</head>
+
+<body>
+	<input type="file" id="file" />
+	<input type="button" id="upload" value="Upload" />
+	<hr />
+	<pre id="logs" style="color:red"></pre>
+	<hr />
+	<pre id="users"></pre>
+	<script type="text/javascript" src="{% static 'uploader/js/jquery-3.4.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'uploader/js/papaparse.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'uploader/js/script.js' %}"></script>
+</body>
+
+</html>
